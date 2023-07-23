@@ -1,0 +1,24 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@types/node": "^18.16.19",
+    "nuxt": "^3.6.3"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "bootstrap-icons": "^1.10.5",
+    "daisyui": "^3.2.1",
+    "postcss": "^8.4.26",
+    "scrollreveal": "^4.0.9",
+    "tailwindcss": "^3.3.3"
+  }
+}
