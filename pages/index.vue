@@ -29,7 +29,7 @@ useHead({
 <template>
   <div id="page1">
     <div class="absolute z-2" >
-      <div class="absolute z-0 min-h-screen md:w-[50vw] w-screen bg-secondary-content">
+      <div class="absolute z-0 min-h-screen md:w-[50vw] w-screen bg-secondary-content bg-opacity-50 md:bg-opacity-100">
       </div>
       <div class="z-1 h-screen w-screen overflow-hidden text-right">
         <img class="inline h-screen" src="assets/images/vladimir-malyavko-vdQGc0lSd1c-unsplash.jpg" alt="">

@@ -6,8 +6,8 @@ const userName:string = "Mikan";
 <template>
   <div class="w-fit flex flex-col">
     <div class="md:w-[40vw]">
-      <p class="md:text-8xl text-4xl md:mb-5 homepageReveal">Hello!</p>
-      <p class="md:text-6xl text-2xl md:mb-3 homepageReveal">
+      <p class="md:text-8xl text-4xl md:mb-5">Hello!</p>
+      <p class="md:text-6xl text-2xl md:mb-3">
         I'm
         <span
             class="hover:text-orange-600 ease duration-500 font-extralight font-['IBM_Plex_Mono']"
@@ -20,15 +20,15 @@ const userName:string = "Mikan";
         </transition>
       </p>
       <div id="myJobs" class="md:text-4xl text-xl">
-        <p class="homepageReveal">
+        <p>
           <span class="font-mono"><i class="bi bi-arrow-right"></i></span>
           <span class="font-sans">Student</span>
         </p>
-        <p class="homepageReveal">
+        <p>
           <span class="font-mono"><i class="bi bi-arrow-right"></i></span>
           <span class="font-mono">Full Stack Developer</span>
         </p>
-        <p class="homepageReveal">
+        <p>
           <span class="font-mono"><i class="bi bi-arrow-right"></i></span>
           <span class="font-serif">Photographer</span>
         </p>
@@ -41,9 +41,9 @@ const userName:string = "Mikan";
 export default {
   data: () => {
     return {
-      ifIconShow: false
+      ifIconShow: false,
     }
-  }
+  },
 }
 </script>
 
@@ -61,5 +61,16 @@ export default {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.5s ease;
+}
+
+.slide-leave-to,
+.slide-enter-from {
+  opacity: 100;
+  transform: translateY(-100%);
 }
 </style>

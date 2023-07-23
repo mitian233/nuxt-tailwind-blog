@@ -20,11 +20,13 @@ onMounted(()=>{
   <div class="bg-base">
     <nuxt-page />
     <top-bar />
+    <!--
     <transition name="slide">
       <div v-if="isLoading" class="fixed inset-0 bg-black z-50 flex justify-center">
         <loading />
       </div>
     </transition>
+    -->
   </div>
 </template>
 
