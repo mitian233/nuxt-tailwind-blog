@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.font-title-mono {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.font-title {
+    @apply font-serif;
+}
+
+.body-text p{
+    @apply pb-3
+}
+
+body {
+    transition: all 0.5s ease;
+}

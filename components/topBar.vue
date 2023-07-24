@@ -15,8 +15,11 @@ onBeforeRouteUpdate((to, from, next) => {
 <template>
   <transition name="slide-up">
     <div v-if="showMenu" id="menu" class="fixed inset-0 min-h-screen w-screen bg-black text-white">
-      <div id="menu" class="w-full md:mx-40 md:pt-24 pt-14 pb-14 text-center md:text-left flex flex-col justify-center">
+      <div id="menu" class="w-full md:mx-40 md:pt-24 pt-24 pb-14 text-center md:text-left flex flex-col justify-center">
         <nuxt-link class="router-link" to="/"><p class="md:ml-4">Home</p></nuxt-link>
+        <nuxt-link class="router-link" to="/posts"><p class="md:ml-4">Posts</p></nuxt-link>
+        <nuxt-link class="router-link" to="/projects"><p class="md:ml-4">Projects</p></nuxt-link>
+        <nuxt-link class="router-link" to="/links"><p class="md:ml-4">Links</p></nuxt-link>
         <nuxt-link class="router-link" to="/about"><p class="md:ml-4">About</p></nuxt-link>
       </div>
       <div class="md:px-40 md:text-left px-20 text-center">
@@ -41,7 +44,7 @@ onBeforeRouteUpdate((to, from, next) => {
 
 <style scoped>
 .router-link{
-  @apply text-4xl hover:bg-white hover:text-black ease-in-out duration-300 py-2;
+  @apply text-4xl hover:bg-white hover:text-black ease-in-out duration-300 py-2 font-['IBM_Plex_Mono'];
 }
 
 a {

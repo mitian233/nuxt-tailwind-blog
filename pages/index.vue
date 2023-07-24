@@ -19,9 +19,9 @@ onMounted(()=>{
   }
 })
 useHead({
-  title:'Home',
+  title:'Home - Mikan',
   meta: [
-    {name: 'description', content: 'Mikan\'s Portfolio'}
+    {name: 'description', content: 'Mikan\'s Homepage'},
   ],
 })
 </script>

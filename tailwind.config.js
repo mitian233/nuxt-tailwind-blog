@@ -10,8 +10,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'sans': ['Jost', 'sans-serif'],
-      'serif': ['Playfair Display', 'serif'],
+      'sans': ['Jost', 'Noto Sans SC', 'sans-serif'],
+      'serif': ['Playfair Display', 'Noto Serif SC', 'serif'],
       'mono': ['IBM Plex Mono', 'monospace'],
     },
     extend: {},
