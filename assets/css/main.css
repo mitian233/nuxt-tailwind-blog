@@ -10,10 +10,11 @@
     @apply font-serif;
 }
 
-.body-text p{
-    @apply pb-3
-}
-
 body {
     transition: all 0.5s ease;
+}
+
+pre code .line {
+    display: block;
+    min-height: 1rem;
 }

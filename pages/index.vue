@@ -31,8 +31,8 @@ useHead({
     <div class="absolute z-2" >
       <div class="absolute z-0 min-h-screen md:w-[50vw] w-screen bg-secondary-content bg-opacity-50 md:bg-opacity-100">
       </div>
-      <div class="z-1 h-screen w-screen overflow-hidden text-right">
-        <img class="inline h-screen" src="assets/images/vladimir-malyavko-vdQGc0lSd1c-unsplash.jpg" alt="">
+      <div class="z-1 h-screen w-screen overflow-hidden text-right" style="background: url('assets/images/res029011_training.jpg') no-repeat fixed center;background-size: cover;">
+        <!--<img class="inline h-screen" src="assets/images/vladimir-malyavko-vdQGc0lSd1c-unsplash.jpg" alt="">-->
       </div>
     </div>
     <div class="absolute min-h-screen w-screen md:p-24 p-14 flex flex-col justify-center z-3">

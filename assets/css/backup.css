@@ -1,0 +1,34 @@
+
+#document h3,
+#document h4,
+#document h5,
+#document h6 {
+    @apply font-sans pb-2 pt-4 no-underline;
+}
+
+#document h3 {
+    @apply text-3xl font-bold;
+}
+
+#document h4 {
+    @apply text-2xl font-bold;
+}
+
+#document p {
+    @apply text-base text-xl pb-3;
+}
+
+#document pre {
+    @apply w-auto bg-base-content text-base-100 rounded-lg text-sm p-4 mb-6 relative overflow-auto;
+}
+#document code {
+    @apply whitespace-pre
+}
+
+#document p code {
+    @apply bg-base-content text-base-100 rounded-lg text-sm p-1;
+}
+
+#document a {
+    @apply underline hover:text-primary ease-in-out duration-200;
+}

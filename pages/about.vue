@@ -11,7 +11,7 @@ useHead({
 <template>
   <div class="min-h-screen px-10 py-32 md:px-32 md:pt-20">
     <h1 class="text-6xl font-extrabold my-5 font-title-mono">About</h1>
-    <div class="font-serif text-xl text-justify body-text">
+    <div class="font-serif text-xl body-text">
       <ContentDoc />
     </div>
   </div>

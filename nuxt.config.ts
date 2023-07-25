@@ -11,7 +11,32 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content'
   ],
-  content: {},
+  components: {
+    global: true,
+    dirs: ['~/components/ProseComponents'],
+  },
+  content: {
+    highlight: {
+      theme: 'github-dark',
+      preload:['php', 'css', 'html', 'ts', 'tsx', 'json', 'javascript', 'go', 'sh', 'shell', 'bash', 'yaml', 'toml', 'vue', 'vue-html', 'latex']
+    },
+    markdown: {
+      tags:{
+        h1: 'ProseH1',
+        h2: 'ProseH2',
+        h3: 'ProseH3',
+        h4: 'ProseH4',
+        h5: 'ProseH5',
+        h6: 'ProseH6',
+        a: 'ProseA',
+        li: 'ProseLi',
+        img: 'ProseImg',
+        blockquote: 'ProseBlockQuote',
+        pre: 'ProsePre',
+        p: 'ProseP',
+      }
+    }
+  },
   plugins:[],
   app: {
     head: {

@@ -25,9 +25,14 @@ useHead({
         <ul>
           <li v-for="post in list" :key="post.id" class="py-4">
             <nuxt-link :to="`${post._path}`">
-              <h2 class="text-4xl text-primary hover:text-primary-content ease-in-out duration-500">{{ post.title }}</h2>
-              <p class="text-secondary">{{post.date}}</p>
-              <p>{{post.discription}}</p>
+              <div class="md:flex justify-between flex-wrap">
+                <div>
+                  <h2 class="text-4xl text-primary hover:text-primary-content ease-in-out duration-500">{{ post.title }}</h2>
+                  <p class="text-secondary">{{post.date}}</p>
+                  <p>{{post.discription}}</p>
+                </div>
+                <img class="max-w-full max-h-full w-1/6 my-4 rounded-lg" :src="post.cover">
+              </div>
               <hr/>
             </nuxt-link>
           </li>
