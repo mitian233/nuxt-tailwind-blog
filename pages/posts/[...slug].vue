@@ -5,7 +5,7 @@
 <template>
   <main>
     <ContentDoc v-slot="{ doc }">
-      <div class="min-h-screen px-10 py-32 md:px-32 md:pt-20">
+      <div class="min-h-screen w-full px-10 py-32 md:px-32 md:pt-20">
         <h1 class="text-6xl font-extrabold mt-5 mb-3 font-title-mono">{{ doc.title }}</h1>
         <p class="pb-3">{{doc.date}}</p>
         <div class="font-serif text-xl min-w-fit" id="document">

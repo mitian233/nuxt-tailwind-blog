@@ -31,7 +31,10 @@ useHead({
                   <p class="text-secondary">{{post.date}}</p>
                   <p>{{post.discription}}</p>
                 </div>
-                <img class="max-w-full max-h-full w-1/6 my-4 rounded-lg" :src="post.cover">
+                <div class="md:max-h-[150px] md:w-[250px] w-full my-4 rounded-lg overflow-hidden">
+                  <img class="w-full" :src="post.cover">
+                </div>
+
               </div>
               <hr/>
             </nuxt-link>
