@@ -25,19 +25,19 @@ onBeforeRouteUpdate((to, from, next) => {
         <nuxt-link class="router-link" to="/about"><p class="md:ml-4">About</p></nuxt-link>
       </div>
       <div class="md:px-40 md:text-left px-20 text-center">
-        <p>2023 ©Harada Ayase All Rights Reserved. </p>
-        <p>Website design: <a href="https://github.com/mitian233">Mikan</a></p>
-        <div class="flex items-center">
-          <p>Picture Copyright:&nbsp;</p>
-          <div class="inline">
+        <p>Website design: <a href="https://github.com/mitian233">Mikan</a> | GitHub: <a href="http://github.com/mitian233/nuxt-tailwind-blog">nuxt-tailwind-blog</a></p>
+        <div class="flex flex-row items-center">
+          <p class="inline">Picture Copyright:&nbsp;</p>
+          <div class="inline-block">
             <svg width="32" height="32" class="UP8CN" viewBox="0 0 32 32" version="1.1" aria-hidden="false">
               <desc lang="en-US">Unsplash logo</desc>
               <title id="unsplash">Unsplash</title>
               <path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z" style="fill:#ffffff;fill-opacity:1"></path>
             </svg>
           </div>
-          <p class="font-['Noto_Sans_SC']">&nbsp;Unsplash</p>
+          <p class="inline font-['Noto_Sans_SC']">&nbsp;Unsplash</p>
         </div>
+        <p>2023 ©Harada Ayase All Rights Reserved. </p>
       </div>
     </div>
   </transition>
