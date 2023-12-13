@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import topBar from '~/components/topBar.vue';
 import loading from "~/components/loading.vue";
-import { onBeforeRouteUpdate, onBeforeRouteLeave } from "#app";
+import { useHead, onBeforeRouteUpdate, onBeforeRouteLeave } from "#app";
 import {onMounted} from "vue";
 const isLoading = ref<boolean>(true);
 
@@ -10,6 +10,12 @@ const waitLoading = () => {
     isLoading.value = false;
   })
 }
+
+useHead({
+  bodyAttrs: {
+    class: 'scroll-smooth'
+  }
+})
 
 onMounted(()=>{
   waitLoading()

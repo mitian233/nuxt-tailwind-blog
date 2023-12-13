@@ -18,3 +18,7 @@ pre code .line {
     display: block;
     min-height: 1rem;
 }
+
+.hoverAnimation{
+    @apply transition duration-500 ease-in-out transform hover:-translate-y-1 ;
+}

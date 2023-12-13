@@ -37,7 +37,10 @@ export default defineNuxtConfig({
       }
     }
   },
-  plugins:[],
+  plugins:[
+      '~/plugins/scrollreveal.client.ts',
+    '~/plugins/timeFormat.ts',
+  ],
   app: {
     head: {
       title: 'Mikan',

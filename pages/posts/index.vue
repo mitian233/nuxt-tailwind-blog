@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import mainLayout from "@/layouts/mainLayout.vue";
 import {useHead} from "#imports";
+const { $timeFormat } = useNuxtApp();
+//import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
 /*
 const isLoading = ref<boolean>(true);
 const postsData = ref<{[key:string]:any}[]>([]);
@@ -14,38 +17,34 @@ useHead({
   meta: [
     {name: 'description', content: 'Mikan\'s Homepage'},
   ],
-})
+});
 </script>
 
 <template>
-  <main>
-    <div class="min-h-screen py-32 flex flex-row justify-center">
-      <div class="w-10/12 md:w-9/12">
-        <h1 class="text-6xl font-extrabold my-5 font-title-mono">Posts</h1>
-        <ContentList path="/posts" v-slot="{ list }">
-          <ul>
-            <li v-for="post in list" :key="post.id" class="py-4">
-              <nuxt-link :to="`${post._path}`">
-                <div class="md:flex justify-between flex-wrap">
-                  <div>
-                    <h2 class="text-4xl text-primary hover:text-primary-content ease-in-out duration-500">{{
-                        post.title
-                      }}</h2>
-                    <p class="text-secondary">{{ post.date }}</p>
-                    <p>{{ post.discription }}</p>
-                  </div>
-                  <div class="md:max-h-[150px] md:w-[250px] w-full my-4 rounded-lg overflow-hidden">
-                    <img class="w-full" :src="post.cover">
-                  </div>
-                </div>
-                <hr/>
-              </nuxt-link>
-            </li>
-          </ul>
-        </ContentList>
-      </div>
-    </div>
-  </main>
+  <main-layout>
+    <h1 class="text-6xl font-extrabold my-5 font-title-mono">Posts</h1>
+    <ContentList :query="{ sort: [{ date: -1 }] }" path="/posts" v-slot="{ list }">
+      <ul>
+        <li v-for="post in list" :key="post.id" class="py-4">
+          <nuxt-link :to="`${post._path}`">
+            <div class="md:flex justify-between flex-wrap">
+              <div>
+                <h2 class="text-4xl text-primary hover:text-primary-content ease-in-out duration-500">{{
+                    post.title
+                  }}</h2>
+                <p class="text-secondary">{{ $timeFormat(post.date) }}</p>
+                <p>{{ post.discription }}</p>
+              </div>
+              <div class="md:max-h-[150px] md:w-[250px] w-full my-4 rounded-lg overflow-hidden">
+                <img class="w-full" :src="post.cover">
+              </div>
+            </div>
+            <hr/>
+          </nuxt-link>
+        </li>
+      </ul>
+    </ContentList>
+  </main-layout>
   <!--
   <div class="min-h-screen px-10 py-32 md:px-32 md:py-20">
     <h1 class="text-6xl font-extrabold my-5 font-title-mono">Posts</h1>

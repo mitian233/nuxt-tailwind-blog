@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import mainLayout from "@/layouts/mainLayout.vue";
 import {useHead} from "#imports";
 
 useHead({
@@ -10,14 +11,12 @@ useHead({
 </script>
 
 <template>
-  <div class="min-h-screen py-32 flex flex-row justify-center">
-    <div class="w-10/12 md:w-9/12">
-      <h1 class="text-6xl font-extrabold my-5 font-title-mono">Projects</h1>
-      <div class="font-serif text-xl body-text">
-        <ContentDoc />
-      </div>
+  <main-layout>
+    <h1 class="text-6xl font-extrabold my-5 font-title-mono">Projects</h1>
+    <div class="font-serif text-xl body-text">
+      <ContentDoc />
     </div>
-  </div>
+  </main-layout>
 </template>
 
 <style scoped>
