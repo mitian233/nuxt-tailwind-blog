@@ -3,7 +3,7 @@ defineProps<{id:string}>()
 </script>
 
 <template>
-  <h2 class="font-sans mb-2 mt-4 no-underline text-4xl font-bold" :id="id">
+  <h2 class="font-sans mb-2 mt-4 no-underline md:text-4xl text-2xl font-bold" :id="id">
     <NuxtLink :href="`#${id}`">
       <slot />
     </NuxtLink>

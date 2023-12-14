@@ -25,8 +25,8 @@ onBeforeRouteUpdate((to, from, next) => {
         <nuxt-link class="router-link" to="/about"><p class="md:ml-4">About</p></nuxt-link>
       </div>
       <div class="md:px-40 md:text-left px-20 text-center">
-        <p>Website design: <a href="https://github.com/mitian233">Mikan</a> | GitHub: <a href="http://github.com/mitian233/nuxt-tailwind-blog">nuxt-tailwind-blog</a></p>
-        <div class="flex flex-row items-center">
+        <p>2023 ©Harada Ayase All Rights Reserved. </p>
+        <!--<div class="flex flex-row items-center">
           <p class="inline">Picture Copyright:&nbsp;</p>
           <div class="inline-block">
             <svg width="32" height="32" class="UP8CN" viewBox="0 0 32 32" version="1.1" aria-hidden="false">
@@ -36,8 +36,8 @@ onBeforeRouteUpdate((to, from, next) => {
             </svg>
           </div>
           <p class="inline font-['Noto_Sans_SC']">&nbsp;Unsplash</p>
-        </div>
-        <p>2023 ©Harada Ayase All Rights Reserved. </p>
+        </div>-->
+        <p>Website design: <a href="http://github.com/mitian233/nuxt-tailwind-blog">Mikan</a></p>
       </div>
     </div>
   </transition>

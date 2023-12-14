@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import mainLayout from "@/layouts/mainLayout.vue";
 import {useHead} from "#imports";
-const { $timeFormat } = useNuxtApp();
+import {useDayjs} from "#dayjs";
+const dayjs = useDayjs();
 //import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
 /*
 const isLoading = ref<boolean>(true);
@@ -22,17 +23,17 @@ useHead({
 
 <template>
   <main-layout>
-    <h1 class="text-6xl font-extrabold my-5 font-title-mono">Posts</h1>
+    <h1 class="md:text-6xl text-4xl font-extrabold my-5 font-title-mono">Posts</h1>
     <ContentList :query="{ sort: [{ date: -1 }] }" path="/posts" v-slot="{ list }">
       <ul>
         <li v-for="post in list" :key="post.id" class="py-4">
           <nuxt-link :to="`${post._path}`">
             <div class="md:flex justify-between flex-wrap">
               <div>
-                <h2 class="text-4xl text-primary hover:text-primary-content ease-in-out duration-500">{{
+                <h2 class="md:text-4xl text-2xl text-primary hover:text-primary-content ease-in-out duration-500">{{
                     post.title
                   }}</h2>
-                <p class="text-secondary">{{ $timeFormat(post.date) }}</p>
+                <p class="text-secondary md:text-base text-sm">{{ dayjs(post.date).format('YYYY/MM/DD HH:mm:ss') }}</p>
                 <p>{{ post.discription }}</p>
               </div>
               <div class="md:max-h-[150px] md:w-[250px] w-full my-4 rounded-lg overflow-hidden">

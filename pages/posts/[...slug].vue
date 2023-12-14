@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import mainLayout from "@/layouts/mainLayout.vue";
-const { $timeFormat } = useNuxtApp();
+import {useDayjs} from "#dayjs";
+const dayjs = useDayjs();
 </script>
 
 <template>
   <ContentDoc v-slot="{ doc }">
     <main-layout>
-      <h1 class="text-6xl font-extrabold mt-5 mb-3 font-title-mono">{{ doc.title }}</h1>
-      <p class="pb-3">{{ $timeFormat(doc.date) }}</p>
-      <div class="font-serif text-xl min-w-fit" id="document">
+      <h1 class="md:text-6xl text-4xl font-extrabold mt-5 mb-3 font-title-mono">{{ doc.title }}</h1>
+      <p class="md:text-base text-sm pb-3">{{ dayjs(doc.date).format('YYYY/MM/DD HH:mm:ss') }}</p>
+      <div class="font-serif md:text-xl min-w-fit" id="document">
         <ContentRenderer :value="doc">
           <ContentRendererMarkdown :value="doc" class="w-full post-default prose prose-md">
             {{ doc }}

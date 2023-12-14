@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 // https://content.nuxtjs.org/api/configuration
+// @ts-nocheck
 export default defineNuxtConfig({
   // @ts-ignore
   postcss: {
@@ -9,6 +10,7 @@ export default defineNuxtConfig({
     },
   },
   modules: [
+      'dayjs-nuxt',
     '@nuxt/content'
   ],
   components: {
@@ -39,7 +41,6 @@ export default defineNuxtConfig({
   },
   plugins:[
       '~/plugins/scrollreveal.client.ts',
-    '~/plugins/timeFormat.ts',
   ],
   app: {
     head: {

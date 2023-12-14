@@ -73,7 +73,7 @@ const isLoading = ref<boolean>(true);
 
 <template>
   <main-layout>
-    <h1 class="text-6xl font-extrabold my-5 font-title-mono">Links</h1>
+    <h1 class="md:text-6xl text-4xl font-extrabold my-5 font-title-mono">Links</h1>
     <div class="grid md:grid-cols-2">
       <a v-for="(card, index) in linkItem" :href="card.siteURL" class="hoverAnimation">
         <div class="relative rounded-xl overflow-auto p-3 w-full">
